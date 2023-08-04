@@ -11,6 +11,7 @@ html {
     --background-dim: rgba(0, 0, 0, 0.02);
     --accent: #39534d;
     --border: rgba(0, 0, 0, 0.2);
+    --link: #000212;
 }
 
 body {
@@ -30,6 +31,17 @@ body {
 ::selection {
     background: var(--foreground);
     color: var(--background);
+}
+
+a {
+    color: var(--link);
+    text-decoration-color: var(--foreground-dim);
+    text-decoration-style: 1px solid;
+    transition: 500ms;
+}
+
+a:hover {
+    text-decoration-color: var(--foreground);
 }
 
 .unselectable {
