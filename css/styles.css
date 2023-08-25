@@ -70,15 +70,24 @@ a:hover {
     border-radius: 20px;
 }
 
-.vh-height {
-    height: 100vh;
-}
-
 .frame {
     min-width: 100%;
     min-height: 100%;
     border-radius: 20px;
     border: 1px solid var(--border);
+}
+
+@media (max-width: 767px) {
+    .frame-wrapper {
+        padding: 0;
+    }
+    .frame {
+        border: none;
+    }
+}
+
+.vh-height {
+    height: 100vh;
 }
 
 .hidden {
