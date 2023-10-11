@@ -102,7 +102,12 @@ a:hover {
 }
 
 .dropdown-menu {
-    background-color: #f9f9ff;
+    background-color: #ecedf2;
+}
+
+.dropdown-item:active {
+    background-color: var(--foreground);
+    color: var(--background);
 }
 
 .name {
@@ -177,24 +182,30 @@ a:hover {
 
 /* Page loading  */
 
-#loading-wrapper {
-    backdrop-filter: blur(75px);
+#loading-screen {
+    backdrop-filter: blur(15px);
     color: var(--foreground);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 10000;
 }
 
 .fade-away {
-    animation: fade-away 300ms forwards;
+    animation: fade-away 350ms forwards;
 }
 
 @keyframes fade-away {
     0% {
         color: var(--foreground);
-        backdrop-filter: blur(75px);
+        backdrop-filter: blur(15px);
     }
 
     100% {
         color: var(--background);
-        backdrop-filter: blur(0px);
+        backdrop-filter: blur(1px);
     }
 }
 
